@@ -1,0 +1,12 @@
+{
+  "include": ["src/**/*"], // Path to files that should be compiled
+  "exclude": ["node_modules"], // Path to files that should not be compiled
+  "compilerOptions": {
+    "target": "esnext", // ECMAScript (standard for JavaScript)
+    "module": "esnext", // Module code generation
+    "sourceMap": true, // Generates map files to link compiled .js to .ts
+    "outDir": "./web-server/compiled", // Directory where .ts will be compiled in .js
+    "rootDir": "./src", // Root directory for input files
+    "strict": true, // Enable all strict type-checking options
+  }
+}
