@@ -4,6 +4,12 @@ import { Professor } from "./models.js";
 const professor = new Professor('Ben Sinclair', 40, 'Let me tell you a story about outer space..',
     ['Geometry', 'Geomatics', 'Celestial Navigation']);
 
+/*
+ Create a list of buttons.
+ The objects are similar to e.g. <button class="btn" id="btn-1">Greet</button> in index.html file
+ An HTML element object has the type HTMLElement
+ A list of HTML element objects has the type HTMLElement[]
+ */
 let buttonList: any[] = [];
 buttonList.push(new Button('Greet', 'btn', 'btn-1').createButton());
 buttonList.push(new Button('Tell a story', 'btn', 'btn-2').createButton());
@@ -15,6 +21,7 @@ buttonList.push(new Button('Animate', 'btn', 'btn-7').createButton());
 buttonList.push(new Button('Animate', 'btn', 'btn-8').createButton());
 buttonList.push(new Button('Back Home', 'btn', 'btn-9').createButton());
 
+// Add an event to each HTMLElement
 buttonList[0].onclick = function () {
     professor.behaviour.greet();
 }
@@ -59,6 +66,7 @@ buttonList[8].onclick = function () {
     location.reload();
 }
 
+// Pass through button list and add title for each relevant section
 for (let i = 0; i < buttonList.length - 1; i++) {
     if (i === 0) {
         let title1 = document.createElement('h2');
